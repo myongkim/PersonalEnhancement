@@ -40,6 +40,8 @@ class ViewController: UIViewController {
         let monthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: fourthView.frame.width, height: fourthView.frame.height))
         monthLabel.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         monthLabel.textAlignment = .center
+        monthLabel.text = "Please choose your month"
+        monthLabel.alpha = 0.5
         fourthView.addSubview(monthLabel)
         
         
@@ -53,9 +55,11 @@ extension ViewController: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return months.count
+        
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return months[row]
+        
     }
     
     
@@ -70,7 +74,7 @@ extension ViewController: UIPickerViewDelegate {
         print("row:", months[row])
   
         let monthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: fourthView.frame.width, height: fourthView.frame.height))
-        monthLabel.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        monthLabel.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         monthLabel.textAlignment = .center
         fourthView.addSubview(monthLabel)
         monthLabel.text = months[row]
