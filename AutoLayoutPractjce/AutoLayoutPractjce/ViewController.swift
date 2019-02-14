@@ -48,7 +48,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func goingToSecondPage(_ sender: Any) {
-       print(savedMonth)
+        print(savedMonth)
+        
+        let labelVC = storyboard?.instantiateViewController(withIdentifier: "LableViewController") as! LabelViewController
+        labelVC.savedMessage = savedMonth
+        present(labelVC, animated: true, completion: nil)
+        
+        
         
     }
     

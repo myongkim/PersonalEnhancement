@@ -10,12 +10,15 @@ import UIKit
 
 class LabelViewController: UIViewController {
     
+    @IBOutlet weak var label: UILabel!
     var savedMessage: String = "Empty String"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        label.text = savedMessage
     }
+    
     
 
 
