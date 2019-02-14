@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstViewHeightProportion: NSLayoutConstraint!
     @IBOutlet weak var fourthView: UIView!
     
+    var savedMonth: String = ""
+    
     @IBOutlet weak var pickerView: UIPickerView!
     let months: [String] = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
   
@@ -43,9 +45,13 @@ class ViewController: UIViewController {
         monthLabel.text = "Please choose your month"
         monthLabel.alpha = 0.5
         fourthView.addSubview(monthLabel)
-        
+    }
+    
+    @IBAction func goingToSecondPage(_ sender: Any) {
+       print(savedMonth)
         
     }
+    
 
 }
 extension ViewController: UIPickerViewDataSource {
@@ -58,6 +64,7 @@ extension ViewController: UIPickerViewDataSource {
         
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        savedMonth = months[row]
         return months[row]
         
     }

@@ -47,6 +47,16 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBw-ty-l58" userLabel="FifthView">
                                 <rect key="frame" x="0.0" y="538" width="375" height="133.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoa-oV-AWa">
+                                        <rect key="frame" x="121" y="44" width="96" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Second Page"/>
+                                        <connections>
+                                            <action selector="goingToSecondPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S7n-Jq-P1k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zG2-I1-Ngw" userLabel="SecondView">
@@ -90,6 +100,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="taB-mO-FLH">
+            <objects>
+                <viewController restorationIdentifier="LableViewController" storyboardIdentifier="LableViewController" id="d25-dZ-dL1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gGz-sj-fd6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ3-JJ-THN">
+                                <rect key="frame" x="15" y="55" width="345" height="179.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jJ3-JJ-THN" firstAttribute="leading" secondItem="wme-QM-bf7" secondAttribute="leading" constant="15" id="GaD-qO-HUR"/>
+                            <constraint firstItem="wme-QM-bf7" firstAttribute="trailing" secondItem="jJ3-JJ-THN" secondAttribute="trailing" constant="15" id="LOU-4Y-Lx7"/>
+                            <constraint firstItem="jJ3-JJ-THN" firstAttribute="top" secondItem="wme-QM-bf7" secondAttribute="top" constant="35" id="jzY-pj-9fL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wme-QM-bf7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsv-jR-MQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="22.938530734632685"/>
         </scene>
     </scenes>
 </document>
