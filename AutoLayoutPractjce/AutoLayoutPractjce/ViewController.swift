@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         fourthView.addSubview(monthLabel)
     }
     
+    // going to the lableView Controller
     @IBAction func goingToSecondPage(_ sender: Any) {
         print(savedMonth)
         
@@ -54,8 +55,9 @@ class ViewController: UIViewController {
         labelVC.savedMessage = savedMonth
         present(labelVC, animated: true, completion: nil)
         
-        
-        
+    }
+    // exit to ViewController
+    @IBAction func unwindToViewControler(_ unwindSegue: UIStoryboardSegue) {
     }
     
 
@@ -70,7 +72,7 @@ extension ViewController: UIPickerViewDataSource {
         
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        savedMonth = months[row]
+        
         return months[row]
         
     }
@@ -91,6 +93,7 @@ extension ViewController: UIPickerViewDelegate {
         monthLabel.textAlignment = .center
         fourthView.addSubview(monthLabel)
         monthLabel.text = months[row]
+        savedMonth = months[row]
         
     }
     
