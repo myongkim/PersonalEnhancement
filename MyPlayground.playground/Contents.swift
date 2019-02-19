@@ -461,11 +461,57 @@ func fuzzBizz() {
 fuzzBizz()
 
 
+print()
+
+//===
+//How would you transform [0,3,2,1] to ["three","three","three", "two","two","one"] in Swift?
+
+func changeArrayOfNumber(array: [Int]) {
+
+   var sortedArray = Array(array.sorted().reversed())
+    sortedArray.popLast()
+
+    
+    for i in 0...sortedArray.count {
+        if sortedArray.contains(i) {
+            sortedArray.append(i)
+        }
+    }
+    
+    sortedArray.append(3)
+    sortedArray.sorted().reversed()
+    sortedArray.popLast()
+    print(sortedArray)
+    
+}
+changeArrayOfNumber(array: [0,3,2,1])
 
 
 
+//////
 
+// Tuples
 
+let number: Int = 10
+
+//let threeNumbers: (Int, Int, Int) = (1, 2, 5)
+//type(of: threeNumbers)
+//
+//threeNumbers
+//
+//threeNumbers.0
+//threeNumbers.1
+//threeNumbers.2
+
+("1", 1) < ("3.14", 99)
+    
+("일", 1) > ("이", 2.0)
+    
+//(1, "zebra") < ("2", "apple")
+
+("blue", -1) < ("purple", 1)
+    
+//("blue", false) < ("purple", true)
 
 
 
