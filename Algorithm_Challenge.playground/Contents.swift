@@ -34,7 +34,7 @@ func numJewelsInStones(_ J: String, _ S: String) -> Int {
     
 }
 
-numJewelsInStones("hello", "world")
+numJewelsInStones("helloasas", "world")
 
 
 
